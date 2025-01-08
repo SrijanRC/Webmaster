@@ -56,6 +56,11 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
+nav ul li a img {
+  height: 50px;
+  border-radius: 15px;
+}
+
 /* Main Content Styles */
 main {
   padding: 40px 0;
