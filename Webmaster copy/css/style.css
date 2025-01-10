@@ -1,0 +1,89 @@
+/* Custom Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  min-height: 100vh;
+  color: #56403F;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  border: 1px solid red; /* To visualize the boundaries */
+}
+.row {
+  border: 1px solid green; /* To visualize the boundaries */
+}
+section {
+  border: 1px solid blue; /* To visualize the boundaries */
+}
+
+.mt-6 {
+  margin-top: 110px;
+}
+
+.mb-6 {
+  margin-bottom: 110px;
+}
+
+/* Header Styles */
+header {
+  background-color: rgba(120, 144, 119, 0.98);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/*.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(120, 144, 119, 0.98) !important;
+}*/
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(89, 58, 28);
+  font-weight: bold;
+  background-color: #F1F6F1;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  background-color: #e6e6cc;
+  transform: scale(1.05);
+}
+
+/* Main Content Styles */
+main {
+  flex: 1;
+}
+
+.big-title {
+  font-size: 18rem;
+  font-weight: 100;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.bolder {
+  font-weight: 550;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .big-title {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .big-title {
+    font-size: 7rem;
+  }
+}
