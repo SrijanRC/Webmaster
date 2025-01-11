@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey - Roots</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #F8F5F1;
+            color: #333;
+            font-family: 'Roboto Slab', serif;
+        }
+        .brown-section {
+            background-color: #A67C52;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .off-white-section {
+            background-color: #fff;
+            padding: 40px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .journey-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            text-align: left;
+            position: relative;
+        }
+        .step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .step img {
+            flex: 1;
+            max-width: 45%;
+            border-radius: 5px;
+        }
+        .step-content {
+            flex: 1;
+            max-width: 45%;
+        }
+        .icon-number {
+            background-color: #A67C52;
+            color: #fff;
+            font-size: 1.25rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .step p {
+            margin-top: 10px;
+        }
+        .arrow {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 130%;
+            transform: translateY(-10%);
+            z-index: 2; /* Ensures arrows stay on top of other content */
+        }
+        .step:nth-child(odd) .arrow {
+            left: 50%; /* Moves the arrow to the middle */
+            transform: translate(-50%, -50%) scaleX(-1); /* Centers horizontally and vertically */
+        }
+        .step:nth-child(even) .arrow {
+            left: 50%; /* Same behavior for even steps */
+            transform: translate(-50%, -50%);
+        }
+        footer {
+            background-color: #444;
+            color: #ccc;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="resources/roots.png" alt="Logo" height="50" class="d-inline-block align-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="journey.html">Journey</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+                        <li class="nav-item"><a class="nav-link" href="references.html">References</a></li>
+                        <li class="nav-item"><a class="nav-link" href="order.html"><img src="resources/telephone.png" alt="Call us" height="16"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Journey Content -->
+    <main class="container mt-4">
+        <!-- Title Section -->
+        <section class="brown-section">
+            <h1 class="journey-title">A Plant's Journey to You</h1>
+            <p class="lead">Local, sustainable, organic farmed foods get to you.</p>
+        </section>
+
+        <!-- Steps Section -->
+        <section class="off-white-section">
+            <!-- Step 1 -->
+            <div class="step">
+                <img src="resources/local-farm.jpg" alt="Local Farm">
+                <div class="step-content">
+                    <div class="icon-number">1</div>
+                    <h2 class="section-title">Plants Grown Local</h2>
+                    <p>Roots sources all foods at our restaurant directly from farmers in Chester County, PA. Vegetables, fruits, soy, and rice are grown just a 30-minute truck ride from our restaurant so you know our ingredients are fresh.</p>
+                </div>
+                <img src="resources/arrow-right.png" alt="Arrow" class="arrow arrow-left">
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+                <img src="resources/grassland-collaboration.jpg" alt="Grassland Collaboration">
+                <div class="step-content">
+                    <div class="icon-number">2</div>
+                    <h2 class="section-title">Environmentally Friendly</h2>
+                    <p>We support farmers who are a part of the Grassland Bird Collaboration, ensuring that grassland species thrive while producing high-quality, fresh goods. Monitoring breeding success and fostering healthy ecosystems is integral to their process.</p>
+                </div>
+                <img src="resources/arrow-right.png" alt="Arrow" class="arrow">
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+                <img src="resources/preparing-food.jpg" alt="Preparing Food">
+                <div class="step-content">
+                    <div class="icon-number">3</div>
+                    <h2 class="section-title">Prepared Here at Roots</h2>
+                    <p>Once ingredients arrive from local farms to the kitchen, we start preparing food the day you get here to ensure freshness.</p>
+                </div>
+                <img src="resources/arrow-right.png" alt="Arrow" class="arrow arrow-left">
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step">
+                <img src="resources/compost-bin.jpg" alt="Compost Bin">
+                <div class="step-content">
+                    <div class="icon-number">4</div>
+                    <h2 class="section-title">After Eating</h2>
+                    <p>We never waste food. Leftovers go straight into our compost bin, enriching the soil for our personal garden and supporting sustainable agriculture.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-1">Roots is a fictitious company created for TSA PA Region 5 Regional Conference.</p>
+            <p class="mb-1">&copy; 2025 Roots. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
