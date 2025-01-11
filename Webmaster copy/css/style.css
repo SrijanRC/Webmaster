@@ -12,16 +12,6 @@ body {
   flex-direction: column;
 }
 
-.container {
-  border: 1px solid red; /* To visualize the boundaries */
-}
-.row {
-  border: 1px solid green; /* To visualize the boundaries */
-}
-section {
-  border: 1px solid blue; /* To visualize the boundaries */
-}
-
 .mt-6 {
   margin-top: 110px;
 }
