@@ -10,10 +10,79 @@
     <style>
         body {
             background-color: #F1F6F1;
+            font-family: 'Roboto Slab', serif;
+            color: #56403F;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .section-divider {
+            width: 60%;
+            height: 2px;
+            background-color: rgba(120, 144, 119);
+            margin: 2rem auto;
+        }
+        .zoom-hover img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .zoom-hover img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .call-to-action {
+            background: rgba(120, 144, 119);
+            color: #F1F6F1;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .call-to-action:hover {
+            background: #2e8b57;
+            color: #f9f9f9;
+        }
+        @media (max-width: 768px) {
+            .big-title {
+                font-size: 2.5rem;
+            }
+        }
+        /* Decorative Circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .circle.circle-top-left {
+            width: 400px;
+            height: 400px;
+            top: -125px;
+            left: -125px;
+            background-color: #56403F;
+        }
+        .circle.circle-bottom-right {
+            width: 500px;
+            height: 500px;
+            bottom: -75px;
+            right: -110px;
+            background-color: #789077;
+        }
+        .circle-wrapper {
+            position: absolute;
+            width: 100%; /* Full width of the page */
+            height: 100%; /* Full height of the page */
+            overflow: hidden; /* Hide the overflowing part of the circle */
+            z-index: -1;  /* Keep it behind other content */
         }
     </style>
 </head>
 <body>
+    <div class="circle-wrapper">
+        <!-- Decorative Circles -->
+        <div class="circle circle-top-left"></div>
+        <div class="circle circle-bottom-right"></div>
+    </div>
 
     <!-- Header Section -->
     <header class="sticky-top">
@@ -33,7 +102,6 @@
                         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
                         <li class="nav-item"><a class="nav-link" href="references.html">References</a></li>
-                        <li class="nav-item"><a class="nav-link" href="order.html"><img src="resources/telephone.png" alt="Call us" height="16"></a></li>
                     </ul>
                 </div>
             </div>
@@ -43,14 +111,15 @@
     <!-- Main Content Section -->
     <main class="container">
         <section class="text-center my-5">
-            <h1 class="big-title display-1">About</h1>
+            <h1 class="big-title">About</h1>
             <h4 class="fs-2">Our Journey and Mission</h4>
+            <div class="section-divider"></div>
         </section>
 
-        <section class="row align-items-center my-5">
+        <section class="row align-items-center my-5 zoom-hover">
             <div class="col-md-6">
                 <h2 class="display-5 mb-3">From Passion to Purpose</h2>
-                <p class="fs-5">Founded in 2024 by two passionate self-motivated culinary artists, Roots is an inclusive vegetarian restaurant dedicated to catering to all dietary preferences. We strive to support sustainable food production while offering delicious meals for everyone.</p>
+                <p class="fs-5">Founded in 2024 by two passionate culinary artists, Roots is an inclusive vegetarian restaurant dedicated to all dietary preferences. We strive to support sustainable food production while offering delicious meals for everyone.</p>
                 <p class="fs-5">The concept of Roots sprouted from personal experiences and a desire to create a space where dietary needs are not just accommodated but celebrated.</p>
             </div>
             <div class="col-md-6 text-center">
@@ -58,26 +127,27 @@
             </div>
         </section>
 
-        <section class="row align-items-center my-5">
+        <section class="row align-items-center my-5 zoom-hover">
             <div class="col-md-6 text-center">
                 <img src="resources/farm.jpg" alt="Farm fields" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-md-6">
                 <h2 class="display-5 mb-3">What’s in a Name?</h2>
-                <p class="fs-5">A plant is only as strong as its roots. With this principle at the core of our values, we take pride in connecting farm-fresh ingredients to your table. Our name reflects our dedication to fostering a deep connection between people, food, and the environment.</p>
+                <p class="fs-5">A plant is only as strong as its roots. With this principle at our core, we connect farm-fresh ingredients to your table. Our name reflects our dedication to fostering a deep connection between people, food, and the environment.</p>
             </div>
         </section>
 
         <section class="text-center my-5">
             <h2 class="display-5 mb-3">Behind the Design</h2>
-            <p class="fs-5">The dark brown background bars behind many of the pages on our site represent the roots as pillars that hold our restaurant up. This design element is a visual reminder of our commitment to strong foundations and sustainable practices.</p>
+            <p class="fs-5">The dark brown bars behind many pages symbolize roots as pillars holding our restaurant up, reminding us of our commitment to sustainability.</p>
             <img src="resources/roots-design.jpg" alt="Roots Design" class="img-fluid rounded shadow-sm">
         </section>
 
         <section class="text-center my-5">
             <h2 class="display-5 mb-3">Navigation with Ease</h2>
-            <p class="fs-5">We’ve designed our website to provide you with the best experience. Easily explore what we have to offer and learn where your food comes from.</p>
+            <p class="fs-5">Our website offers a seamless experience, making it easy to explore what we offer and learn where your food comes from.</p>
             <img src="resources/navigation.jpg" alt="Navigation illustration" class="img-fluid rounded shadow-sm">
+            <a href="journey.html" class="call-to-action mt-4 d-inline-block">Learn More</a>
         </section>
     </main>
 
@@ -90,7 +160,6 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

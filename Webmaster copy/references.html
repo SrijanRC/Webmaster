@@ -3,42 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+    <title>References - Roots</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #F1F6F1;
+            font-family: 'Roboto Slab', serif;
+            color: #56403F;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .big-title {
+            font-size: 15rem;
+        }
+        .section-divider {
+            width: 60%;
+            height: 2px;
+            background-color: rgba(120, 144, 119);
+            margin: 2rem auto;
+        }
+        .references-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        @media (max-width: 768px) {
+            .big-title {
+                font-size: 2.5rem;
+            }
+        }
+        /* Decorative Circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .circle.circle-top-left {
+            width: 400px;
+            height: 400px;
+            top: -125px;
+            left: -125px;
+            background-color: #56403F;
+        }
+        .circle.circle-bottom-right {
+            width: 500px;
+            height: 500px;
+            bottom: -75px;
+            right: -110px;
+            background-color: #789077;
+        }
+        .circle-wrapper {
+            position: absolute;
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+    <div class="circle-wrapper">
+        <div class="circle circle-top-left"></div>
+        <div class="circle circle-bottom-right"></div>
+    </div>
 
     <!-- Header Section -->
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="journey.html">Journey</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="order.html">Order</a></li>
-                    <li><a href="references.html">References</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="resources/roots.png" alt="Logo" height="50" class="d-inline-block align-top rounded">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="journey.html">Journey</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="references.html">References</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Main Content Section -->
-    <main>
-        <div class="container">
-            <h1>Page Title</h1>
-            <p>Welcome to the [Page Title] page. Customize this content as needed.</p>
-        </div>
+    <main class="container">
+        <section class="text-center my-5">
+            <h1 class="big-title">References</h1>
+            <h4 class="fs-2">Acknowledgments and Credits</h4>
+            <div class="section-divider"></div>
+        </section>
+
+        <section class="references-content my-5">
+            <p>All stock images accessed with Canva for Education unless noted otherwise. View the <a href="https://www.canva.com/policies/content-license-agreement/" target="_blank">Canva Content License Agreement</a>, which permits photos and clipart to be used on web pages (5.7; 5A) and school projects (5.2) as such. Images do not require individual citation for these purposes, as noted in the license agreement.</p>
+            
+            <p><strong>Grassland Bird Collaboration</strong>, the hypothetical farms involved in conservation and the ones supplying Roots.</p>
+
+            <div class="text-center my-4">
+                <img src="resources/grassland-bird-collaboration-logo.png" alt="Grassland Bird Collaboration Logo" class="img-fluid rounded shadow-sm" style="max-width: 200px;">
+            </div>
+
+            <p><strong>Citations:</strong></p>
+            <ul>
+                <li>THE GRASSLAND BIRD COLLABORATION. (2024). <a href="https://wcitrust.org/the-grassland-bird-collaboration/" target="_blank">https://wcitrust.org/the-grassland-bird-collaboration/</a></li>
+            </ul>
+        </section>
     </main>
 
     <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 My Website. All rights reserved.</p>
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">Roots is a fictitious company created for TSA PA Region 5 Regional Conference.</p>
+            <p class="mb-1">&copy; 2025 Roots. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
