@@ -75,6 +75,9 @@
             overflow: hidden; /* Hide the overflowing part of the circle */
             z-index: -1;  /* Keep it behind other content */
         }
+        .flip {
+            transform: scaleX(-1);
+        }
     </style>
 </head>
 <body>
@@ -123,13 +126,13 @@
                 <p class="fs-5">The concept of Roots sprouted from personal experiences and a desire to create a space where dietary needs are not just accommodated but celebrated.</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="resources/chef.jpg" alt="Chef writing notes" class="img-fluid rounded shadow-sm">
+                <img src="resources/chef.png" alt="Chef writing notes" class="img-fluid rounded shadow-sm">
             </div>
         </section>
 
         <section class="row align-items-center my-5 zoom-hover">
             <div class="col-md-6 text-center">
-                <img src="resources/farm.jpg" alt="Farm fields" class="img-fluid rounded shadow-sm">
+                <img src="resources/farm.png" alt="Farm fields" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-md-6">
                 <h2 class="display-5 mb-3">What’s in a Name?</h2>
@@ -140,13 +143,13 @@
         <section class="text-center my-5">
             <h2 class="display-5 mb-3">Behind the Design</h2>
             <p class="fs-5">The dark brown bars behind many pages symbolize roots as pillars holding our restaurant up, reminding us of our commitment to sustainability.</p>
-            <img src="resources/roots-design.jpg" alt="Roots Design" class="img-fluid rounded shadow-sm">
+            <img src="resources/roots-design.png" alt="Roots Design" class="img-fluid rounded shadow-sm">
         </section>
 
         <section class="text-center my-5">
             <h2 class="display-5 mb-3">Navigation with Ease</h2>
             <p class="fs-5">Our website offers a seamless experience, making it easy to explore what we offer and learn where your food comes from.</p>
-            <img src="resources/navigation.jpg" alt="Navigation illustration" class="img-fluid rounded shadow-sm">
+            <img src="resources/navigation.png" alt="Navigation illustration" class="img-fluid flip">
             <a href="journey.html" class="call-to-action mt-4 d-inline-block">Learn More</a>
         </section>
     </main>
